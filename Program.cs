@@ -1,4 +1,70 @@
-﻿
+﻿int num1;
+int num2;
+string meth;
+int sum;
+char choice;
+
+do
+{
+    try
+    {
+        Console.WriteLine("Please input your first number");
+        num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Please input your operator");
+        meth = Convert.ToString(Console.ReadLine());
+
+        Console.WriteLine("Please input your second number");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+
+
+        switch (meth)
+        {
+            case "+":
+                Console.WriteLine("You have selected +");
+                sum = num1 + num2;
+                Console.WriteLine("The sum of your inputs is " + sum);
+                break;
+
+            case "-":
+                Console.WriteLine("You have selected -");
+                sum = num1 - num2;
+                Console.WriteLine("The sum of your inputs is " + sum);
+                break;
+
+            case "*":
+                Console.WriteLine("You have selected *");
+                sum = num1 * num2;
+                Console.WriteLine("The sum of your inputs is " + sum);
+                break;
+
+            case "/":
+                Console.WriteLine("You have selected /");
+                sum = num1 / num2;
+                Console.WriteLine("The sum of your inputs is " + sum);
+                break;
+
+            case "%":
+                Console.WriteLine("You have selected %");
+                sum = num1 % num2;
+                Console.WriteLine("The sum of your inputs is " + sum);
+                break;
+        }
+    }
+    catch
+    {
+        Console.WriteLine("Incorrect Input");
+    }
+    Console.WriteLine("Do you want to try again?");
+    choice = Convert.ToChar(Console.ReadLine());
+}
+while (choice != 'N');
+Console.ReadKey();
+
+//Random = new Random();
+//int number = rand.next(0, 100);
+/*
 int input1;
 int input2;
 int input3;
@@ -72,3 +138,4 @@ do
 }
 while (choice != 'N');
 Console.ReadKey();
+*/
